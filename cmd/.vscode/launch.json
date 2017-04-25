@@ -15,6 +15,21 @@
       ],
       "sourceMaps": true,
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Tests",
+      "preLaunchTask": "test-build",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--runInBand"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/build/**/*.js"
+      ],
+      "sourceMaps": true,
+      "console": "integratedTerminal"
     }
   ]
 }

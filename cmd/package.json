@@ -10,6 +10,7 @@
   "scripts": {
     "start": "npm run debug-build && node build",
     "debug-build": "tsc",
+    "test-build": "tsc --project debug-tests-config.json",
     "test": "jest --watch",
     "coverage": "jest --coverage"
   },

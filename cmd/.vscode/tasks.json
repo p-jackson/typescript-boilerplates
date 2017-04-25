@@ -13,6 +13,13 @@
         "run",
         "debug-build"
       ]
+    },
+    {
+      "taskName": "test-build",
+      "args": [
+        "run",
+        "test-build"
+      ]
     }
   ]
 }
