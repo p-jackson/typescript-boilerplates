@@ -1,0 +1,45 @@
+{
+  "name": "@p-jackson/cmd-ts-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate for a TypeScript command-line app",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:p-jackson/typescript-boilerplates.git"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "start": "npm run debug-build && node build",
+    "debug-build": "tsc",
+    "test": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "author": "Philip Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/inquirer": "0.0.33",
+    "@types/jest": "^19.2.2",
+    "jest": "^19.0.2",
+    "ts-jest": "^19.0.10",
+    "typescript": "^2.3.0"
+  },
+  "dependencies": {
+    "inquirer": "^3.0.6"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
